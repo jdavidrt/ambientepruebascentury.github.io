@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup con Menú y GIFs</title>
+  <style>
+    /* General */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Primer Navbar (Superior) */
+    .top-navbar {
+      display: flex;
+      align-items: center;
+      background-color: #ff6600;
+      padding: 10px 20px;
+    }
+
+    .top-navbar .menu-container {
+      display: flex;
+      margin-left: auto;
+      gap: 15px;
+    }
+
+    .top-navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .top-navbar a:hover {
+      opacity: 0.8;
+    }
+
+    .top-navbar .search-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-container input[type="text"] {
+      padding: 5px;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+      width: 200px;
+    }
+
+    .podcast-btn {
+      background-color: #8000ff;
+      color: yellow;
+      font-weight: bold;
+      border: none;
+      border-radius: 3px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .podcast-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Segundo Navbar (Inferior) */
+    .navbar {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 10px 20px;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      justify-content: flex-start;
+      /* Alinea el menú a la izquierda */
+    }
+
+    .menu-item {
+      color: black;
+      font-size: 16px;
+      /* Ajuste del tamaño del texto */
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .menu-item:hover {
+      text-decoration: underline;
+    }
+
+    .menu-item img {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 10px);
+      width: 150px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      display: none;
+      z-index: 10;
+    }
+
+    .menu-item:hover img {
+      display: block;
+    }
+
+    /* Carrusel */
+    #mederiCarousel {
+      margin-top: 20px;
+    }
+  </style>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Primer Navbar -->
+  <div class="top-navbar">
+    <div class="menu-container">
+      <a href="#">Pacientes</a>
+      <a href="#">Aliados</a>
+      <a href="#">Hospital Universitario</a>
+    </div>
+    <div class="search-container">
+      <input type="text" placeholder="Buscar...">
+      <button class="podcast-btn">Podcast</button>
+    </div>
+  </div>
+
+  <!-- Segundo Navbar -->
+  <nav class="navbar">
+    <a class="navbar-brand img_logo" href="https://www.mederi.com.co/">
+      <img src="logo-Mederi.png" alt="Inicio">
+    </a>
+    <ul class="menu">
+      <li class="menu-item">¿Quiénes somos?
+        <img src="Quienes somos.gif" alt="Aliados">
+      </li>
+      <li class="menu-item">Servicios médicos y quirúrgicos
+        <img src="Servicios médicos y quirúrgicos.gif" alt="Servicios médicos y quirúrgicos">
+      </li>
+      <li class="menu-item">Busque su Médico
+        <img src="Busque su Médico.gif" alt="Busque su Médico">
+      </li>
+      <li class="menu-item">Cómo acceder a nuestros servicios
+        <img src="Cómo acceder a nuestros servicios.gif" alt="Cómo acceder a nuestros servicios">
+      </li>
+      <li class="menu-item">Durante su estadía
+        <img src="Durante su estadía.gif" alt="Durante su estadía">
+      </li>
+      <li class="menu-item">Después de su estadía
+        <img src="Después de su estadía.gif" alt="Después de su estadía">
+      </li>
+      <li class="menu-item">Atención al usuario
+        <img src="Atención al usuario.gif" alt="Atención al usuario">
+      </li>
+      <li class="menu-item">Humanización
+        <img src="Humanización.gif" alt="Humanización">
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Carrusel -->
+  <div id="mederiCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#mederiCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#mederiCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#mederiCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="CARR1.jpg" class="d-block w-100" alt="Primera imagen">
+      </div>
+      <div class="carousel-item">
+        <img src="CARR2.jpg" class="d-block w-100" alt="Segunda imagen">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mederiCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mederiCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
