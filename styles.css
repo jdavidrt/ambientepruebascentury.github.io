@@ -11,3 +11,7 @@ button {
 button:hover {
     transform: scale(1.05);
 }
+
+.century-logo {
+    max-width: 130px;
+}
